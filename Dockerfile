@@ -13,4 +13,8 @@ RUN git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git \
 
 USER $NB_UID
 
+ARG PYTHON_LIBS="mecab-python3"
+
+RUN pip install $PYTHON_LIBS
+
 WORKDIR /work
